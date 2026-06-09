@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Embed</title>
+    <style>
+        /* Remove default browser spacing and hide scrollbars */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000000; /* Black background matches video/presentation bars */
+        }
+
+        /* Force the container to fill the entire viewport precisely */
+        .fullscreen-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Ensure the iframe scales perfectly to fill the container */
+        .fullscreen-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="fullscreen-container">
+        <iframe 
+            loading="lazy" 
+            src="https://canva.com" 
+            allowfullscreen="allowfullscreen" 
+            allow="fullscreen">
+        </iframe>
+    </div>
+
+</body>
+</html>

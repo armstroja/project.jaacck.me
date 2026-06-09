@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full Screen Embed</title>
+    <title>Project Display</title>
     <style>
-        /* Force root structures to clear default website paddings */
+        /* Erase all margins and hide browser layout bars */
         html, body {
             margin: 0 !important;
             padding: 0 !important;
@@ -15,34 +15,33 @@
             background-color: #000000 !important;
         }
 
-        /* Build a responsive box to containerize the presentation engine */
-        .canva-viewport-container {
+        /* Set viewport bounds to fill the device screen entirely */
+        .fullscreen-view {
             position: absolute !important;
             top: 0 !important;
             left: 0 !important;
             width: 100vw !important;
             height: 100vh !important;
-            z-index: 999999 !important;
         }
 
-        /* Enforce absolute full-screen scaling for the frame */
-        .canva-viewport-container iframe {
+        /* Force iframe to follow fluid responsive styling matrix */
+        .fullscreen-view iframe {
             width: 100% !important;
             height: 100% !important;
             border: none !important;
+            display: block !important;
             padding: 0 !important;
             margin: 0 !important;
-            display: block !important;
         }
     </style>
 </head>
 <body>
 
-    <div class="canva-viewport-container">
-        <!-- Embedded Canva Asset -->
+    <div class="fullscreen-view">
+        <!-- Using the public secure token stream link for design DAHMFNzLrTk -->
         <iframe 
-            loading="lazy" 
             src="https://canva.com"
+            " 
             allowfullscreen="allowfullscreen" 
             allow="fullscreen">
         </iframe>

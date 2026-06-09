@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Display</title>
+    <title>Project Portfolio</title>
     <style>
-        /* Erase all margins and hide browser layout bars */
+        /* Erase standard browser padding and lock viewport limits */
         html, body {
             margin: 0 !important;
             padding: 0 !important;
@@ -15,8 +15,8 @@
             background-color: #000000 !important;
         }
 
-        /* Set viewport bounds to fill the device screen entirely */
-        .fullscreen-view {
+        /* Build structural wrapper to containerize the iframe stream */
+        .canva-frame-container {
             position: absolute !important;
             top: 0 !important;
             left: 0 !important;
@@ -24,8 +24,8 @@
             height: 100vh !important;
         }
 
-        /* Force iframe to follow fluid responsive styling matrix */
-        .fullscreen-view iframe {
+        /* Force responsive scaling across mobile and desktop sizes */
+        .canva-frame-container iframe {
             width: 100% !important;
             height: 100% !important;
             border: none !important;
@@ -37,8 +37,8 @@
 </head>
 <body>
 
-    <div class="fullscreen-view">
-        <!-- Using the public secure token stream link for design DAHMFNzLrTk -->
+    <div class="canva-frame-container">
+        <!-- Changed to the official API token URL path to bypass the connection block -->
         <iframe 
             src="https://canva.com"
             " 

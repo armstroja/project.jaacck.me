@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Portfolio</title>
+    <title>Home Portfolio</title>
     <style>
-        /* Erase standard browser padding and lock viewport limits */
+        /* Erase standard browser padding and completely hide desktop/mobile scrollbars */
         html, body {
             margin: 0 !important;
             padding: 0 !important;
@@ -15,33 +15,35 @@
             background-color: #000000 !important;
         }
 
-        /* Build structural wrapper to containerize the iframe stream */
-        .canva-frame-container {
+        /* Enforce a strict full-viewport structural container */
+        .viewport-wrapper {
             position: absolute !important;
             top: 0 !important;
             left: 0 !important;
             width: 100vw !important;
             height: 100vh !important;
+            margin: 0 !important;
+            padding: 0 !important;
         }
 
-        /* Force responsive scaling across mobile and desktop sizes */
-        .canva-frame-container iframe {
+        /* Stretch the secure iframe to fluidly fill 100% of the screen area */
+        .viewport-wrapper iframe {
             width: 100% !important;
             height: 100% !important;
             border: none !important;
-            display: block !important;
             padding: 0 !important;
             margin: 0 !important;
+            display: block !important;
         }
     </style>
 </head>
 <body>
 
-    <div class="canva-frame-container">
-        <!-- Changed to the official API token URL path to bypass the connection block -->
+    <div class="viewport-wrapper">
+        <!-- Secure authenticated Canva stream containing the public viewing token -->
         <iframe 
-            src="https://canva.com"
-            " 
+            loading="lazy" 
+            src="https://canva.com" 
             allowfullscreen="allowfullscreen" 
             allow="fullscreen">
         </iframe>
